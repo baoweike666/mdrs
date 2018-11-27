@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.core.dao.ItemDao">
+    <!--SQL片段  -->
+    <select id="readItem" parameterType="Integer" resultType="Item">
+        select
+            *
+        from
+            item
+        where
+            item_user_id=#{item_user_id}
+	</select>
+	<insert id="writeItem" parameterType="Integer">
+        INSERT INTO item (item_user_id,item_movie_id) value (#{item_user_id},#{item_movie_id})
+	</insert>
+    <delete id="deleteItem" parameterType="String">
+        delete
+        from  item
+    </delete>
+</mapper>

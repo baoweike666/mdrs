@@ -122,4 +122,9 @@ public class MovieController {
 	    }
 	}
 
+	@RequestMapping("/movie/recommend.action")
+	public String recommend(Model model) {
+		return "recommend";
+	}
+
 }

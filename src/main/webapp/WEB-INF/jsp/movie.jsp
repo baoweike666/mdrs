@@ -209,8 +209,8 @@
 				    </a>
 				</li>
 				<li>
-				    <a href="#">
-				      <i class="fa fa-dashboard fa-fw" ></i> 普通用户管理
+				    <a href="${pageContext.request.contextPath}/recommend/display.action">
+				      <i class="fa fa-dashboard fa-fw" ></i> 推荐功能
 				    </a>
 				</li>
 			</ul>

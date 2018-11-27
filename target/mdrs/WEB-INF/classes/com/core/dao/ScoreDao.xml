@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.core.dao.ScoreDao">
+    <!--SQL片段  -->
+	<select id="selectAll" parameterType="String" resultType="Score">
+		select
+		score_id,
+		score_user_id,
+		score_movie_id,
+		score_value
+		from score
+	</select>
+	<select id="selectValue"  resultType="Integer">
+		select score_value
+		from score
+        where socre_user_id=#{socre_user_id} and score_movie_id=#{score_movie_id}
+	</select>
+</mapper>
